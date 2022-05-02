@@ -17,12 +17,12 @@ startButton.addEventListener("click", () => {
   clearInterval(interval); //очищаем на случай ошибок
   interval = setInterval(startTimer, 10);//присваем первым аргументом функцию и интервал в 10 
 });
-// Pause button--------------------------------------------------
+// Pause button вешаю обработчик событий на клик так же стрелочная функция клеар интервал--------------------------------------------------
 pauseButton.addEventListener("click", () => {
   clearInterval(interval);
   disabledBtn()
 });
-//stopButton--------------------------------------------------
+//stopButton вешаю обработчик событий на клик мтрелочную функцию и клеар наш интервал-------------------------------------------------
 stopButton.addEventListener("click", () => {
   clearInterval(interval);
   clearFields();
@@ -77,14 +77,14 @@ function startTimer() {
   if (secondElement > 9) { // если секунд больше 9 то secondElement.innerText = second;
     secondElement.innerText = second;
   }
-  if (second > 59) {
+  if (second > 59) { //если секунд больше 59 то увеличиваю минуты ++и буду обновлять
     minute++;
     minuteElement.innerText = "0" + minute;
     second = 0;
     secondElement.innerText = "0" + second;
   }
   // Minute------------------------------------
-  if (minute < 9) {
+  if (minute < 9) {// смотри выше всё похоже
     minuteElement.innerText = "0" + minute;
   }
   if (minuteElement > 9 ) {
