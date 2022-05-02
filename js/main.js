@@ -15,7 +15,7 @@ const newButton = document.querySelector(".new");
 //Listeners слушатели ------------------------------------------------
 startButton.addEventListener("click", () => {
   clearInterval(interval); //очищаем на случай ошибок
-  interval = setInterval(startTimer, 10);
+  interval = setInterval(startTimer, 10);//присваем первым аргументом функцию и интервал в 10 
 });
 // Pause button--------------------------------------------------
 pauseButton.addEventListener("click", () => {
@@ -59,7 +59,7 @@ function startTimer() {
   if (millisecond < 9) {// если милисекунд меньше 9 millisecondElement.innerText = "0" + millisecond;
     millisecondElement.innerText = "0" + millisecond;
   }
-  if (millisecond > 9) {
+  if (millisecond > 9) { //если больше 9 millisecondElement.innerText = millisecond; через innerText помещаем просто милисекунды
     secondElement.innerText = "0" + second;
     millisecondElement.innerText = millisecond;
   }
@@ -71,10 +71,10 @@ function startTimer() {
   }
 
   //Second-------------------------------------------------
-  if (second < 9) {
+  if (second < 9) { //если секунд меньше 9 то берем секонделемет через инертекс и помещаю 0+ секонд
     secondElement.innerText = "0" + second;
   }
-  if (secondElement > 9) {
+  if (secondElement > 9) { // если секунд больше 9 то secondElement.innerText = second;
     secondElement.innerText = second;
   }
   if (second > 59) {
