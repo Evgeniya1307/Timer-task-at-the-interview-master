@@ -18,20 +18,29 @@ $mainColor2: #1059b8;
 }
 
 .timer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__block {
-        width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__block {
+    width: 150px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    .time {
+      background-color: $mainColor1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      height: 150px;
+      font-size: 95px;
+    }
+    .title {
+        background-color: $mainColor2;
+        padding: 5px;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
-        .time {
-          background-color: $mainColor1;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: white;
-          height: 150px;
-          font-size: 95px;
-        }
+        text-align: center;
+        color: white;
+    }
+  }
 }

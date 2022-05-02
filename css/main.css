@@ -24,4 +24,35 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.timer__block {
+  width: 150px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.timer__block .time {
+  background-color: #2987be;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  height: 150px;
+  font-size: 95px;
+}
+
+.timer__block .title {
+  background-color: #1059b8;
+  padding: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */
