@@ -12,9 +12,9 @@ const pauseButton = document.querySelector(".pause");
 const stopButton = document.querySelector(".stop");
 const newButton = document.querySelector(".new");
 
-//Listeners------------------------------------------------
+//Listeners слушатели ------------------------------------------------
 startButton.addEventListener("click", () => {
-  clearInterval(interval);
+  clearInterval(interval); //очищаем на случай ошибок
   interval = setInterval(startTimer, 10);
 });
 // Pause button--------------------------------------------------
@@ -53,16 +53,17 @@ let hour = 00,
   disabled = true;
 //создаю функцию отвечающую за наш таймер
 function startTimer() {
-  millisecond++;
+  millisecond++;//увеличиваем на 1
 
   //Millisecond------------------------------------------
-  if (millisecond < 9) {
+  if (millisecond < 9) {// если милисекунд меньше 9 millisecondElement.innerText = "0" + millisecond;
     millisecondElement.innerText = "0" + millisecond;
   }
   if (millisecond > 9) {
+    secondElement.innerText = "0" + second;
     millisecondElement.innerText = millisecond;
   }
-  if (millisecond > 99) {
+  if (millisecond > 99) { // если милисекунды больше 99  second++;
     second++;
     secondElement.innerText = "0" + second;
     millisecond = 0;
