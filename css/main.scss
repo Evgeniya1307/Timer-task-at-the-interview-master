@@ -1,4 +1,4 @@
-// две переменные для цветов 
+// две переменные для цветов
 
 $mainColor1: #2987be;
 $mainColor2: #1059b8;
@@ -8,4 +8,11 @@ $mainColor2: #1059b8;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.container {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 150px;
 }
